@@ -1,0 +1,7 @@
+for i=0:2:360
+img = imread('C:\Users\ASUS\Desktop\imageprocessing\kaleidoscopee_.jpg');
+img_rot=imrotate(img,i,'bicubic');
+path='C:\Users\ASUS\Desktop\rotation\'
+fname=sprintf('%simg%03d.jpg',path,i);
+imwrite(img_rot,fname);
+end

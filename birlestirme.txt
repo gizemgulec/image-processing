@@ -1,0 +1,11 @@
+for i=0:2:360
+im1 = imread('C:\Users\ASUS\Desktop\imageprocessing\kaleidoscopee_.jpg');
+path='C:\Users\ASUS\Desktop\rotation\'
+rname=sprintf('%simg%03d.jpg',path,i);
+im2 = imread(rname);
+im2 = imresize(im2,[size(im1,1),size(im1,2)]);
+sum = (im1*0.5+im2*0.5);
+path='C:\Users\ASUS\Desktop\Joined\'
+fname=sprintf('%simg%03d.jpg',path,i);
+imwrite(sum,fname);
+end
